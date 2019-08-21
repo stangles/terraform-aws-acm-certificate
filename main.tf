@@ -39,6 +39,8 @@ resource "aws_route53_record" "cert_validation" {
   records = [
     "${aws_acm_certificate.main.domain_validation_options.0.resource_record_value}",
   ]
+
+  allow_overwrite = "${var.allow_overwrite}"
 }
 
 resource "aws_acm_certificate_validation" "main" {

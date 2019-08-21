@@ -24,3 +24,8 @@ variable "wait_for_validation" {
   description = "If set to \"false\" this module will not wait for the validation to complete and will not return the certificate ARN"
   default     = "true"
 }
+
+variable "allow_overwrite" {
+  description = "Whether or not to overwrite an existing Route53 validation record for the certificate"
+  default     = "false"
+}
